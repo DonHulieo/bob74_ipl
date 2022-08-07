@@ -14,10 +14,10 @@ FinanceOrganization = {
         Fonts = {font1 = 0, font2 = 1, font3 = 2, font4 = 3, font5 = 4, font6 = 5, font7 = 6,
                  font8 = 7, font9 = 8, font10 = 9, font11 = 10, font12 = 11, font13 = 12},
         Style = {normal = 3, light = 1},
-        name = "SimpHub",
-        style = 6,
+        name = "Your Text Here",
+        style = 3,
         color = 0,
-        font = 11,
+        font = 0,
         Set = function(name, style, color, font)
             FinanceOrganization.Name.name = name
             FinanceOrganization.Name.style = style
