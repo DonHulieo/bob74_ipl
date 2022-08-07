@@ -5,7 +5,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Bob_74'
+author 'Bob_74', 'TayMcKenzieNZ'
 description 'Load and customize your map'
 version '2.0.15'
 
@@ -112,16 +112,6 @@ client_scripts {
     , "dlc_tuner/garage.lua"
     , "dlc_tuner/meetup.lua"
     , "dlc_tuner/methlab.lua"
-
-    -- DLC The Contract (Requires forced build 2545 or higher)
-    , "dlc_security/studio.lua"
-    , "dlc_security/billboards.lua"
-    , "dlc_security/musicrooftop.lua"
-    , "dlc_security/garage.lua"
-    , "dlc_security/office1.lua"
-    , "dlc_security/office2.lua"
-    , "dlc_security/office3.lua"
-    , "dlc_security/office4.lua"
 
     -- DLC The Criminal Enterprises (Requires forced build 2699 or higher)
     , "gta_mpsum2/simeonfix.lua"

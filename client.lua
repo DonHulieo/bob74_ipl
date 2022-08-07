@@ -25,7 +25,7 @@ Citizen.CreateThread(function()
     BahamaMamas.Enable(true)
 
     -- Pillbox hospital: 307.1680, -590.807, 43.280
-    PillboxHospital.Enable(true)
+    PillboxHospital.Enable(false)
 
     -- Zancudo Gates (GTAO like): -1600.30100000, 2806.73100000, 18.79683000
     ZancudoGates.LoadDefault()
@@ -38,9 +38,9 @@ Citizen.CreateThread(function()
     Graffitis.Enable(true)
 
     -- UFO
-    UFO.Hippie.Enable(false) -- 2490.47729, 3774.84351, 2414.035
-    UFO.Chiliad.Enable(false) -- 501.52880000, 5593.86500000, 796.23250000
-    UFO.Zancudo.Enable(false) -- -2051.99463, 3237.05835, 1456.97021
+    UFO.Hippie.Enable(true) -- 2490.47729, 3774.84351, 2414.035
+    UFO.Chiliad.Enable(true) -- 501.52880000, 5593.86500000, 796.23250000
+    UFO.Zancudo.Enable(true) -- -2051.99463, 3237.05835, 1456.97021
 
     -- Red Carpet: 300.5927, 199.7589, 104.3776
     RedCarpet.Enable(false)
@@ -77,7 +77,7 @@ Citizen.CreateThread(function()
     -- ====================================================================
     -- =-------------------------- [DLC: Heists] -------------------------=
     -- ====================================================================
-    HeistCarrier.Enable(true) -- 3082.3117, -4717.1191, 15.2622
+    HeistCarrier.Enable(false) -- 3082.3117, -4717.1191, 15.2622
     HeistYacht.LoadDefault() -- -2043.974,-1031.582, 11.981
 
     -- ====================================================================
@@ -142,29 +142,6 @@ Citizen.CreateThread(function()
     if GetGameBuildNumber() >= 2060 then
         DiamondCasino.LoadDefault() -- 1100.000, 220.000, -50.000
         DiamondPenthouse.LoadDefault() -- 976.636, 70.295, 115.164
-    end
-
-    -- ====================================================================
-    -- =------------------- [DLC: Los Santos Tuners] ---------------------=
-    -- ====================================================================
-    if GetGameBuildNumber() >= 2372 then
-        TunerGarage.LoadDefault() -- -1350.0, 160.0, -100.0
-        TunerMethLab.LoadDefault() -- 981.9999, -143.0, -50.0
-        TunerMeetup.LoadDefault() -- -2000.0, 1113.211, -25.36243
-    end
-
-    -- ====================================================================
-    -- =------------------- [DLC: Los Santos The Contract] ---------------------=
-    -- ====================================================================
-    if GetGameBuildNumber() >= 2545 then
-        MpSecurityGarage.LoadDefault() -- -1071.4387, -77.033875, -93.525505
-        MpSecurityMusicRoofTop.LoadDefault() -- -592.6896, 273.1052, 116.302444
-        MpSecurityStudio.LoadDefault() -- -1000.7252, -70.559875, -98.10669
-        MpSecurityBillboards.LoadDefault() -- -592.6896, 273.1052, 116.302444
-        MpSecurityOffice1.LoadDefault() -- -1021.86084, -427.74564, 68.95764
-        MpSecurityOffice2.LoadDefault() -- 383.4156, -59.878227, 108.4595
-        MpSecurityOffice3.LoadDefault() -- -1004.23035, -761.2084, 66.99069
-        MpSecurityOffice4.LoadDefault() -- -587.87213, -716.84937, 118.10156
     end
 
     -- ====================================================================
