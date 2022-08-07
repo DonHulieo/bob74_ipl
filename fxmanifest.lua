@@ -5,7 +5,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Bob_74', 'TayMcKenzieNZ'
+author 'Bob_74'
 description 'Load and customize your map'
 version '2.0.15'
 
@@ -107,11 +107,6 @@ client_scripts {
     -- DLC Diamond Casino (Requires forced build 2060 or higher)
     , "dlc_casino/casino.lua"
     , "dlc_casino/penthouse.lua"
-
-    -- DLC Tuners (Requires forced build 2372 or higher)
-    , "dlc_tuner/garage.lua"
-    , "dlc_tuner/meetup.lua"
-    , "dlc_tuner/methlab.lua"
 
     -- DLC The Criminal Enterprises (Requires forced build 2699 or higher)
     , "gta_mpsum2/simeonfix.lua"

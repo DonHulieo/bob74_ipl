@@ -21,10 +21,10 @@ CriminalEnterpriseWarehouse = {
     },
     Entities = {
         entity_set_style_1 = false,
-        entity_set_style_2 = false,
+        entity_set_style_2 = true,
         entity_set_style_3 = false,
         entity_set_style_4 = false,
-        entity_set_style_5 = true,
+        entity_set_style_5 = false,
 
         Set = function(name, state)
             for entity, _ in pairs(CriminalEnterpriseWarehouse.Entities) do
