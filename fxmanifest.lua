@@ -108,11 +108,6 @@ client_scripts {
     , "dlc_casino/casino.lua"
     , "dlc_casino/penthouse.lua"
 
-    -- DLC Tuners (Requires forced build 2372 or higher)
-    , "dlc_tuner/garage.lua"
-    , "dlc_tuner/meetup.lua"
-    , "dlc_tuner/methlab.lua"
-
     -- DLC The Criminal Enterprises (Requires forced build 2699 or higher)
     , "gta_mpsum2/simeonfix.lua"
     , "gta_mpsum2/vehicle_warehouse.lua"
