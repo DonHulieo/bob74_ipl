@@ -27,6 +27,14 @@ Heist carrier has been disabled as it isn't exactly necessary with Cayo Perico. 
 
 ------------------
 
+# Arena Wars Arena 🏟️
+
+Nor Bob or myself have included these IPLs. You can find and configure them [here](https://github.com/Starystars67/Titch2000_Arena) however I can not guarantee compatibility with my forks of either bob74_ipl, or online interiors.
+
+
+
+------------------
+
 # Install 💾
 
 1. Download my fork of bob74_ipl
