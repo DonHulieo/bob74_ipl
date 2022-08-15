@@ -10,14 +10,14 @@ ExecApartment3 = {
 
     Style = {
         Theme = {
-            modern = {interiorId = 227841, ipl = "apa_v_mp_h_01_c"},
-            moody = {interiorId = 228609, ipl = "apa_v_mp_h_02_c"},
-            vibrant = {interiorId = 229377, ipl = "apa_v_mp_h_03_c"},
-            sharp = {interiorId = 230145, ipl = "apa_v_mp_h_04_c"},
+        --    modern = {interiorId = 227841, ipl = "apa_v_mp_h_01_c"},
+        --    moody = {interiorId = 228609, ipl = "apa_v_mp_h_02_c"},
+        --    vibrant = {interiorId = 229377, ipl = "apa_v_mp_h_03_c"},
+        --    sharp = {interiorId = 230145, ipl = "apa_v_mp_h_04_c"},
             monochrome = {interiorId = 230913, ipl = "apa_v_mp_h_05_c"},
-            seductive = {interiorId = 231681, ipl = "apa_v_mp_h_06_c"},
-            regal = {interiorId = 232449, ipl = "apa_v_mp_h_07_c"},
-            aqua = {interiorId = 233217, ipl = "apa_v_mp_h_08_c"}
+        --    seductive = {interiorId = 231681, ipl = "apa_v_mp_h_06_c"},
+        --    regal = {interiorId = 232449, ipl = "apa_v_mp_h_07_c"},
+        --    aqua = {interiorId = 233217, ipl = "apa_v_mp_h_08_c"}
         },
 
         Set = function(style, refresh)
@@ -64,7 +64,7 @@ ExecApartment3 = {
         end
     }, 
     LoadDefault = function()
-        ExecApartment3.Style.Set(ExecApartment3.Style.Theme.sharp, true)
+        ExecApartment3.Style.Set(ExecApartment3.Style.Theme.monochrome, true) -- modern seems to for some reason cause all textures to flicker for some weird reason. 
         ExecApartment3.Strip.Enable({ExecApartment3.Strip.A, ExecApartment3.Strip.B, ExecApartment3.Strip.C}, false)
         ExecApartment3.Booze.Enable({ExecApartment3.Booze.A, ExecApartment3.Booze.B, ExecApartment3.Booze.C}, false)
         ExecApartment3.Smoke.Set(ExecApartment3.Smoke.none)

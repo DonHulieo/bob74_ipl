@@ -1,5 +1,5 @@
 
--- Apartment 2: -773.22580000 322.82520000 194.88620000
+-- Penthouse Apartment 2, Eclipse Towers: -773.22580000 322.82520000 194.88620000
 
 exports('GetExecApartment2Object', function()
 	return ExecApartment2
@@ -10,14 +10,14 @@ ExecApartment2 = {
 
     Style = {
         Theme = {
-            modern = {interiorId = 227585, ipl = "apa_v_mp_h_01_b"},
-            moody = {interiorId = 228353, ipl = "apa_v_mp_h_02_b"},
-            vibrant = {interiorId = 229121, ipl = "apa_v_mp_h_03_b"},
-            sharp = {interiorId = 229889, ipl = "apa_v_mp_h_04_b"},
-            monochrome = {interiorId = 230657, ipl = "apa_v_mp_h_05_b"},
-            seductive = {interiorId = 231425, ipl = "apa_v_mp_h_06_b"},
-            regal = {interiorId = 232193, ipl = "apa_v_mp_h_07_b"},
-            aqua = {interiorId = 232961, ipl = "apa_v_mp_h_08_b"}
+      --     modern = {interiorId = 227585, ipl = "apa_v_mp_h_01_b"},
+           moody = {interiorId = 228353, ipl = "apa_v_mp_h_02_b"},
+      --      vibrant = {interiorId = 229121, ipl = "apa_v_mp_h_03_b"},
+      --      sharp = {interiorId = 229889, ipl = "apa_v_mp_h_04_b"},
+      --      monochrome = {interiorId = 230657, ipl = "apa_v_mp_h_05_b"},
+      --      seductive = {interiorId = 231425, ipl = "apa_v_mp_h_06_b"},
+      --      regal = {interiorId = 232193, ipl = "apa_v_mp_h_07_b"},
+      --      aqua = {interiorId = 232961, ipl = "apa_v_mp_h_08_b"}
         },
 
         Set = function(style, refresh)
@@ -64,7 +64,7 @@ ExecApartment2 = {
         end
     }, 
     LoadDefault = function()
-        ExecApartment2.Style.Set(ExecApartment2.Style.Theme.seductive, true)
+        ExecApartment2.Style.Set(ExecApartment2.Style.Theme.moody, true) -- modern seems to for some reason cause all textures to flicker for some weird reason. 
         ExecApartment2.Strip.Enable({ExecApartment2.Strip.A, ExecApartment2.Strip.B, ExecApartment2.Strip.C}, false)
         ExecApartment2.Booze.Enable({ExecApartment2.Booze.A, ExecApartment2.Booze.B, ExecApartment2.Booze.C}, false)
         ExecApartment2.Smoke.Set(ExecApartment2.Smoke.none)

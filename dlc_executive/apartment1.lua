@@ -1,5 +1,5 @@
 
--- Apartment 1: -787.78050000 334.92320000 215.83840000
+-- Eclipse Towers, Penthouse 1, Rockford Hills: -787.78050000 334.92320000 215.83840000
 
 exports('GetExecApartment1Object', function()
 	return ExecApartment1
@@ -10,14 +10,14 @@ ExecApartment1 = {
 
     Style = {
         Theme = {
-            modern = {interiorId = 227329, ipl = "apa_v_mp_h_01_a"},
-            moody = {interiorId = 228097, ipl = "apa_v_mp_h_02_a"},
-            vibrant = {interiorId = 228865, ipl = "apa_v_mp_h_03_a"},
-            sharp = {interiorId = 229633, ipl = "apa_v_mp_h_04_a"},
-            monochrome = {interiorId = 230401, ipl = "apa_v_mp_h_05_a"},
-            seductive = {interiorId = 231169, ipl = "apa_v_mp_h_06_a"},
+       --     modern = {interiorId = 227329, ipl = "apa_v_mp_h_01_a"},
+       --     moody = {interiorId = 228097, ipl = "apa_v_mp_h_02_a"},
+       --     vibrant = {interiorId = 228865, ipl = "apa_v_mp_h_03_a"},
+       --     sharp = {interiorId = 229633, ipl = "apa_v_mp_h_04_a"},
+       --     monochrome = {interiorId = 230401, ipl = "apa_v_mp_h_05_a"},
+       --     seductive = {interiorId = 231169, ipl = "apa_v_mp_h_06_a"},
             regal = {interiorId = 231937, ipl = "apa_v_mp_h_07_a"},
-            aqua = {interiorId = 232705, ipl = "apa_v_mp_h_08_a"}
+       --     aqua = {interiorId = 232705, ipl = "apa_v_mp_h_08_a"}
         },
 
         Set = function(style, refresh)
@@ -64,7 +64,7 @@ ExecApartment1 = {
         end
     }, 
     LoadDefault = function()
-        ExecApartment1.Style.Set(ExecApartment1.Style.Theme.modern, true)
+        ExecApartment1.Style.Set(ExecApartment1.Style.Theme.regal, true) -- modern seems to for some reason cause all textures to flicker for some weird reason. 
         ExecApartment1.Strip.Enable({ExecApartment1.Strip.A, ExecApartment1.Strip.B, ExecApartment1.Strip.C}, false)
         ExecApartment1.Booze.Enable({ExecApartment1.Booze.A, ExecApartment1.Booze.B, ExecApartment1.Booze.C}, false)
         ExecApartment1.Smoke.Set(ExecApartment1.Smoke.none)
