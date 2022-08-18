@@ -139,11 +139,12 @@ Citizen.CreateThread(function()
     -- ====================================================================
     -- =------------------- [DLC: Diamond Casino Resort] -----------------=
     -- ====================================================================
- -+[   if GetGameBuildNumber() >= 2060 then
+--[[
+    if GetGameBuildNumber() >= 2060 then
         DiamondCasino.LoadDefault() -- 1100.000, 220.000, -50.000
         DiamondPenthouse.LoadDefault() -- 976.636, 70.295, 115.164
-    end 
-]--
+    end
+]]
 
     -- ====================================================================
     -- =------------------- [DLC: The Criminal Enterprise] ---------------------=
