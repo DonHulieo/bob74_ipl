@@ -104,10 +104,6 @@ client_scripts {
     -- DLC After Hours
     , "dlc_afterhours/nightclubs.lua"
 
-    -- DLC Diamond Casino (Requires forced build 2060 or higher)
-    , "dlc_casino/casino.lua"
-    , "dlc_casino/penthouse.lua"
-
     -- DLC The Criminal Enterprises (Requires forced build 2699 or higher)
     , "gta_mpsum2/simeonfix.lua"
     , "gta_mpsum2/vehicle_warehouse.lua"
