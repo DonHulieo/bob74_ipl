@@ -1,4 +1,4 @@
-# Fix holes and customize the map (Updated to The Criminal Enterprises DLC)
+# Fix holes and customize the map (Updated to The Chop Shop DLC)
 
 The purpose of this script is to fix the holes in the map by loading zones that aren’t loaded by default.
 
