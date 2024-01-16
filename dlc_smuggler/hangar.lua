@@ -29,7 +29,7 @@ SmugglerHangar = {
         default = "set_tint_shell",
         SetColor = function(color, refresh)
             SetIplPropState(SmugglerHangar.interiorId, SmugglerHangar.Walls.default, true, refresh)
-            SetInteriorPropColor(SmugglerHangar.interiorId, SmugglerHangar.Walls.default, color)
+            SetInteriorEntitySetColor(SmugglerHangar.interiorId, SmugglerHangar.Walls.default, color)
         end,
     },
     Floor = {
@@ -51,7 +51,7 @@ SmugglerHangar = {
                 if color == nil then color = 1 end
                 SmugglerHangar.Floor.Decals.Clear(false)
                 SetIplPropState(SmugglerHangar.interiorId, decal, true, refresh)
-                SetInteriorPropColor(SmugglerHangar.interiorId, decal, color)
+                SetInteriorEntitySetColor(SmugglerHangar.interiorId, decal, color)
             end,
             Clear = function(refresh)
                 SetIplPropState(SmugglerHangar.interiorId, {SmugglerHangar.Floor.Decals.decal1, SmugglerHangar.Floor.Decals.decal2, SmugglerHangar.Floor.Decals.decal3,
@@ -66,7 +66,7 @@ SmugglerHangar = {
             SmugglerHangar.Cranes.Clear()
             if crane ~= "" then
                 SetIplPropState(SmugglerHangar.interiorId, crane, true, refresh)
-                SetInteriorPropColor(SmugglerHangar.interiorId, crane, color)
+                SetInteriorEntitySetColor(SmugglerHangar.interiorId, crane, color)
             else
                 if (refresh) then RefreshInterior(SmugglerHangar.interiorId) end
             end
@@ -82,7 +82,7 @@ SmugglerHangar = {
             SmugglerHangar.ModArea.Clear(false)
             if mod ~= "" then 
                 SetIplPropState(SmugglerHangar.interiorId, mod, true, refresh)
-                SetInteriorPropColor(SmugglerHangar.interiorId, mod, color)
+                SetInteriorEntitySetColor(SmugglerHangar.interiorId, mod, color)
             else
                 if (refresh) then RefreshInterior(SmugglerHangar.interiorId) end
             end
@@ -109,7 +109,7 @@ SmugglerHangar = {
                 SmugglerHangar.Bedroom.Style.Clear(false)
                 if bed ~= "" then
                     SetIplPropState(SmugglerHangar.interiorId, bed, true, refresh)
-                    SetInteriorPropColor(SmugglerHangar.interiorId, "set_bedroom_tint", color)
+                    SetInteriorEntitySetColor(SmugglerHangar.interiorId, "set_bedroom_tint", color)
                 else
                     if (refresh) then RefreshInterior(SmugglerHangar.interiorId) end
                 end
@@ -140,7 +140,7 @@ SmugglerHangar = {
                 SmugglerHangar.Lighting.FakeLights.Clear(false)
                 if light ~= "" then
                     SetIplPropState(SmugglerHangar.interiorId, "set_lighting_tint_props", true, refresh)
-                    SetInteriorPropColor(SmugglerHangar.interiorId, "set_lighting_tint_props", light)
+                    SetInteriorEntitySetColor(SmugglerHangar.interiorId, "set_lighting_tint_props", light)
                 else
                     if (refresh) then RefreshInterior(SmugglerHangar.interiorId) end
                 end

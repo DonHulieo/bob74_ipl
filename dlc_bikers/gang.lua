@@ -211,7 +211,8 @@ BikerGang = {
                 if IsNamedRendertargetRegistered(BikerGang.Clubhouse.ClubName.target) then
                     ReleaseNamedRendertarget(GetHashKey(BikerGang.Clubhouse.ClubName.target))
                 end
-                if (HasNamedScaleformMovieLoaded(BikerGang.Clubhouse.ClubName.movieId)) then
+
+                if HasScaleformMovieFilenameLoaded(BikerGang.Clubhouse.ClubName.movieId) then
                     SetScaleformMovieAsNoLongerNeeded(BikerGang.Clubhouse.ClubName.movieId)
                 end
                 BikerGang.Clubhouse.ClubName.renderId = -1
@@ -316,24 +317,24 @@ BikerGang = {
             SelectMission = function(position)
                 if BikerGang.Clubhouse.MissionsWall.movieId ~= -1 then
                     BeginScaleformMovieMethod(BikerGang.Clubhouse.MissionsWall.movieId, "SET_SELECTED_MISSION")
-                    PushScaleformMovieMethodParameterInt(position) -- Mission index 0 to 2 (-1 = no mission)
+                    ScaleformMovieMethodAddParamInt(position) -- Mission index 0 to 2 (-1 = no mission)
                     EndScaleformMovieMethod()
                 end
             end,
             SetMission = function(position, title, desc, textDict, x, y)
                 if BikerGang.Clubhouse.MissionsWall.needToLoad then
-                    if not HasNamedScaleformMovieLoaded(BikerGang.Clubhouse.MissionsWall.movieId) then
+                    if not HasScaleformMovieFilenameLoaded(BikerGang.Clubhouse.MissionsWall.movieId) then
                         BikerGang.Clubhouse.MissionsWall.movieId = LoadScaleform("BIKER_MISSION_WALL")
                     end
                     if BikerGang.Clubhouse.MissionsWall.movieId ~= -1 then
                         if (position > -1) then
                             BeginScaleformMovieMethod(BikerGang.Clubhouse.MissionsWall.movieId, "SET_MISSION")
-                            PushScaleformMovieMethodParameterInt(position)          -- Mission index 0 to 2 (-1 = no mission)
-                            PushScaleformMovieMethodParameterString(title)
-                            PushScaleformMovieMethodParameterString(desc)
-                            PushScaleformMovieMethodParameterButtonName(textDict)
-                            PushScaleformMovieMethodParameterFloat(x)               -- Mission 0: world coordinates X
-                            PushScaleformMovieMethodParameterFloat(y)               -- Mission 0: world coordinates Y
+                            ScaleformMovieMethodAddParamInt(position) -- Mission index 0 to 2 (-1 = no mission)
+                            ScaleformMovieMethodAddParamTextureNameString(title)
+                            ScaleformMovieMethodAddParamTextureNameString(desc)
+                            ScaleformMovieMethodAddParamPlayerNameString(textDict)
+                            ScaleformMovieMethodAddParamFloat(x) -- Mission 0: world coordinates X
+                            ScaleformMovieMethodAddParamFloat(y) -- Mission 0: world coordinates Y
                             EndScaleformMovieMethod()
                         else
                             -- Remove all missions
@@ -347,7 +348,7 @@ BikerGang = {
             end,
             RemoveMission = function(position)
                 BeginScaleformMovieMethod(BikerGang.Clubhouse.MissionsWall.movieId, "HIDE_MISSION")
-                PushScaleformMovieMethodParameterInt(position)
+                ScaleformMovieMethodAddParamInt(position)
                 EndScaleformMovieMethod()
             end,
             Clear = function()
@@ -359,7 +360,8 @@ BikerGang = {
                 if IsNamedRendertargetRegistered(BikerGang.Clubhouse.MissionsWall.prop) then
                     ReleaseNamedRendertarget(GetHashKey(BikerGang.Clubhouse.MissionsWall.prop))
                 end
-                if HasNamedScaleformMovieLoaded(BikerGang.Clubhouse.MissionsWall.movieId) then
+
+                if HasScaleformMovieFilenameLoaded(BikerGang.Clubhouse.MissionsWall.movieId) then
                     SetScaleformMovieAsNoLongerNeeded(BikerGang.Clubhouse.MissionsWall.movieId)
                 end
                 

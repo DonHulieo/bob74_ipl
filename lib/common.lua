@@ -94,9 +94,13 @@ function SetIplPropState(interiorId, props, state, refresh)
             end
         else
             if state then
-                if not IsInteriorPropEnabled(interiorId, props) then EnableInteriorProp(interiorId, props) end
+                if not IsInteriorEntitySetActive(interiorId, props) then
+                    ActivateInteriorEntitySet(interiorId, props)
+                end
             else
-                if IsInteriorPropEnabled(interiorId, props) then DisableInteriorProp(interiorId, props) end
+                if IsInteriorEntitySetActive(interiorId, props) then
+                    DeactivateInteriorEntitySet(interiorId, props)
+                end
             end
         end
         if refresh == true then RefreshInterior(interiorId) end
@@ -147,16 +151,17 @@ function SetupScaleform(movieId, scaleformFunction, parameters)
     if (IsTable(parameters)) then
         for i = 0, Tablelength(parameters) - 1 do
             local p = parameters["p" .. tostring(i)]
-            if (p.type == "bool") then
-                PushScaleformMovieMethodParameterBool(p.value)
-            elseif (p.type == "int") then
-                PushScaleformMovieMethodParameterInt(p.value)
-            elseif (p.type == "float") then
-                PushScaleformMovieMethodParameterFloat(p.value)
-            elseif (p.type == "string") then
-                PushScaleformMovieMethodParameterString(p.value)
-            elseif (p.type == "buttonName") then
-                PushScaleformMovieMethodParameterButtonName(p.value)
+
+            if p.type == "bool" then
+                ScaleformMovieMethodAddParamBool(p.value)
+            elseif p.type == "int" then
+                ScaleformMovieMethodAddParamInt(p.value)
+            elseif p.type == "float" then
+                ScaleformMovieMethodAddParamFloat(p.value)
+            elseif p.type == "string" then
+                ScaleformMovieMethodAddParamTextureNameString(p.value)
+            elseif p.type == "buttonName" then
+                ScaleformMovieMethodAddParamPlayerNameString(p.value)
             end
         end
     end
@@ -169,7 +174,7 @@ function LoadStreamedTextureDict(texturesDict)
     local timeout = 5 * 1000
     local currentTime = 0
 
-    RequestStreamedTextureDict(texturesDict, 0)
+    RequestStreamedTextureDict(texturesDict, false)
     while not HasStreamedTextureDictLoaded(texturesDict) do
         Citizen.Wait(step)
         currentTime = currentTime + step

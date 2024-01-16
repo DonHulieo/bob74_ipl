@@ -45,7 +45,8 @@ FinanceOrganization = {
             if IsNamedRendertargetRegistered(FinanceOrganization.Office.target) then
                 ReleaseNamedRendertarget(GetHashKey(FinanceOrganization.Office.target))
             end
-            if (HasNamedScaleformMovieLoaded(FinanceOrganization.Office.movieId)) then
+
+            if HasScaleformMovieFilenameLoaded(FinanceOrganization.Office.movieId) then
                 SetScaleformMovieAsNoLongerNeeded(FinanceOrganization.Office.movieId)
             end
             FinanceOrganization.Office.renderId = -1

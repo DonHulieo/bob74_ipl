@@ -32,7 +32,7 @@ BikerClubhouse1 = {
             if color == nil then color = 0 end
             BikerClubhouse1.Walls.Clear(false)
             SetIplPropState(BikerClubhouse1.interiorId, walls, true, refresh)
-            SetInteriorPropColor(BikerClubhouse1.interiorId, walls, color)
+            SetInteriorEntitySetColor(BikerClubhouse1.interiorId, walls, color)
         end,
         Clear = function(refresh)
             SetIplPropState(BikerClubhouse1.interiorId, {BikerClubhouse1.Walls.brick, BikerClubhouse1.Walls.plain}, false, refresh)
@@ -44,7 +44,7 @@ BikerClubhouse1 = {
             if color == nil then color = 0 end
             BikerClubhouse1.Furnitures.Clear(false)
             SetIplPropState(BikerClubhouse1.interiorId, furn, true, refresh)
-            SetInteriorPropColor(BikerClubhouse1.interiorId, furn, color)
+            SetInteriorEntitySetColor(BikerClubhouse1.interiorId, furn, color)
         end,
         Clear = function(refresh)
             SetIplPropState(BikerClubhouse1.interiorId, {BikerClubhouse1.Furnitures.A, BikerClubhouse1.Furnitures.B}, false, refresh)
